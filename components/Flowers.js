@@ -22,7 +22,8 @@ class Flowers extends React.Component {
             return null;
         }
         return <li key={flower.common_name}>
-            <a className="cardLink" href={`http://localhost:3000/flower?flower=${flower.common_name}`}>
+            {/* Dev URL: http://localhost:3000 */}
+            <a className="cardLink" href={`https://next-js-flower-app.marcelr1998.vercel.app/flower?flower=${flower.common_name}`}>
                 {flower.cover_image ? <img src={flower.cover_image} alt="" /> : null}
                 <div className="cardContent">
                     <h3 className="cardTitle">{flower.common_name}</h3>
