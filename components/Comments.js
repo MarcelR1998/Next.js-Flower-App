@@ -22,10 +22,12 @@ const Comments = (props) => {
         setLoaded(true);
     }
 
+    //Sets comment input state
     const handleChange = (e) => {
         setUserComment(e.target.value);
     }
 
+    //Posts comment to API
     const post = async (message) => {
         if (message !== "") {
             await fetch(`https://flowers-mock-data.firebaseio.com/comments/MarcelR1998/${index}.json`, {
@@ -43,7 +45,6 @@ const Comments = (props) => {
                 .catch(err => console.error(err))
         }
     }
-
 
     return (
         <div>

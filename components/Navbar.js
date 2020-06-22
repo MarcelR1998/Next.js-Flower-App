@@ -29,7 +29,6 @@ const Navbar = () => {
                 display: flex;
                 justify-content: space-between;
             }
-
             ul {
                 display: flex;
                 margin: 0;
@@ -40,14 +39,11 @@ const Navbar = () => {
             .nav-item {
                 margin-left: 1em;
             }
-               
-
             a {
                 color: black;
                 /* color: white; */
                 text-decoration: none;
             }
-
             a:hover {
                text-decoration: underline; 
             }

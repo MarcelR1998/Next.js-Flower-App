@@ -28,7 +28,6 @@ const Footer = () => {
                 display: flex;
                 justify-content: space-between;
             }
-
             ul {
                 display: flex;
                 margin: 0;
@@ -39,17 +38,13 @@ const Footer = () => {
             .nav-item {
                 margin-left: 1em;
             }
-               
-
             a {
                 color: white;
                 text-decoration: none;
             }
-
             a:hover {
                text-decoration: underline; 
             }
-
         `}</style>
         </footer>
     );

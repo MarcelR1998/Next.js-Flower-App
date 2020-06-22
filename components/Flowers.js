@@ -1,17 +1,17 @@
+//------------------------------------------------------
+//Swap URL with Dev url at line 26 if in dev environment
+//------------------------------------------------------
 class Flowers extends React.Component {
     state = {
         search: "",
     }
 
-    /*     componentDidMount() {
-            const user = this.context;
-        } */
-
+    //Sets search state for filtering flowers.
     onchange = e => {
         this.setState({ search: e.target.value });
-        console.log(this.user);
     }
 
+    //Filters flowers according to search state. Can filter after common_name, latin_name, and blooming_season.
     renderFlowerCard = flower => {
         const { search } = this.state;
 
@@ -72,10 +72,8 @@ class Flowers extends React.Component {
     }
 
     render() {
-
         return (
             <div>
-                {this.user ? <p>hejsan du är inloggad</p> : null}
                 <input type="text" placeholder="Search flower..." id="search" value={this.search} onChange={this.onchange} autoComplete="off" />
                 <ul className="list-group">
                     {this.props.data.map(flower => (

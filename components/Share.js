@@ -10,6 +10,7 @@ class Share extends React.Component {
         });
     }
 
+    //Shows and hides content
     toggleShow = () => {
         if (this.state.show == false) {
             this.setState({
@@ -20,7 +21,6 @@ class Share extends React.Component {
                 show: false
             })
         }
-
     }
 
     copyLink = () => {
@@ -35,7 +35,6 @@ class Share extends React.Component {
             <div>
                 <button id="showButton" onClick={this.toggleShow}>Share this page</button>
                 {this.state.show ?
-
                     <div>
                         <div id="shareLinkDiv">
                             <input id="flowerLink" type="text" readOnly value={this.state.link} />
@@ -44,14 +43,10 @@ class Share extends React.Component {
                         <a className="shareButton twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(this.state.link)}`}>
                             <i className="fa fa-twitter"></i> Twitter
                         </a>
-
                         <a className="shareButton facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(this.state.link)}`}>
                             <i className="fa fa-facebook"></i> Facebook
                         </a>
                     </div>
-
-
-
                     : null}
 
                 <style jsx>{`
